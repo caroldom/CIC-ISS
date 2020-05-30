@@ -1,0 +1,35 @@
+; Test-Code for two CICs:
+; Console-CIC resets Game-CIC
+000: 21      lbli 1
+040: 31      ldi 1
+060: 46      out	;	P1 = 1
+
+070: 80      lbli 0
+078: 55	     in
+07c: 20      ska 3	; if P0.3 = 1 (if Console) skip next
+07e: 46      t 057
+
+		;;CONSOLE
+03f: 21      ldi 2
+05f: 00      lbli 1
+06f: 46      out	; P1 = 2 (reset)
+077: 66      ldi 0
+07b: f3      out	; P1 = 0
+07d: 21      nop
+03e: 31      nop
+01f: 70      nop
+04f: 43      nop
+067: 00      nop
+073: 80      nop
+079: 00      nop
+03c: 4a      nop
+05e: 32      nop
+02f: 00      t 03a
+
+		;;GAME
+057: 00      lbli 1	
+06b: 80      ldi 2
+075: 00      out
+
+		;;BOTH
+03a: 00      out0

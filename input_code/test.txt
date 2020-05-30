@@ -1,0 +1,14 @@
+; Test-Code for one cic
+000: 21      lbli 1
+040: 31      ldi 1
+060: 46      out	;	P1 = 1
+070: 80      tml 05f
+07c: 20      t 07d
+07e: 46      out	;	P0 = 0
+03f: 21      t 03e
+
+05f: 00      out0	;	P1 = 0
+06f: 00      lbli 0	
+077: 80      out    ;	P0 = 1
+07b: 4c      ritsk
+07d: 00      out0
