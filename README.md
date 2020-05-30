@@ -8,7 +8,7 @@ Since the real CIC runs eternally the runtime of the iss has been limited to 20.
 
 The CIC-ISS was written as part of the project SystemXrunner carried out in the computer science bachelors degree of the University of Bremen (http://www.informatik.uni-bremen.de/projekttag/2020/).  
 
-## Build an exectue
+## Build and exectue
 
 - install systemC on path "/usr/local/systemc-2.3.3/" (or change path in makefile to your installation path)
 - `make`
